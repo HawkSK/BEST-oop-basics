@@ -1,6 +1,6 @@
 package com.nordlicht.best.animal;
 
-public class Cat extends Animal{
+public class Cat extends AAnimal {
     public Cat(String name, int age) {
         super(name, age);
     }

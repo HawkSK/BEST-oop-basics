@@ -6,6 +6,7 @@ import java.util.List;
 public class FoodBowl implements Food {
     private final int CAPACITY = 100;
 
+    // observer pattern
     private final List<FilledEvent> observers = new ArrayList<>();
     private int fullness;
 
@@ -43,6 +44,7 @@ public class FoodBowl implements Food {
         publishUpdate();
     }
 
+    // TODO observer pattern
     public void subscribe(FilledEvent update) {
         observers.add(update);
     }

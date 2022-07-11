@@ -1,6 +1,6 @@
 package com.nordlicht.best;
 
-import com.nordlicht.best.animal.Animal;
+import com.nordlicht.best.animal.AAnimal;
 import com.nordlicht.best.animal.Cat;
 import com.nordlicht.best.animal.Chihuahua;
 import com.nordlicht.best.animal.Dog;
@@ -15,7 +15,7 @@ import com.nordlicht.best.beverage.Water;
 import com.nordlicht.best.car.Car;
 import com.nordlicht.best.car.Engine;
 
-public class Main {
+public class CompleteMain {
     public static void main(String[] args) {
         System.out.println("\nObjects, classes\n");
 
@@ -24,19 +24,19 @@ public class Main {
 
 //        encapsulation();
 
-//        abstraction();
-
-        Animal buddy = new Dog("Buddy", 5);
-        Animal rambo = new Chihuahua("Rambo", 2);
+        AAnimal buddy = new Dog("Buddy", 5);
+        AAnimal rambo = new Chihuahua("Rambo", 2);
 
 //        polymorphism(buddy, rambo);
+
+//        abstraction();
 
 //        singletonPattern(buddy, rambo);
 
         observerPattern(buddy, rambo);
     }
 
-    private static void polymorphism(Animal buddy, Animal rambo) {
+    private static void polymorphism(AAnimal buddy, AAnimal rambo) {
         System.out.println("\nPolymorphism\n");
 
         // overriding
@@ -76,7 +76,7 @@ public class Main {
         System.out.println(foodBowl.getAvailableFood());
     }
 
-    private static void singletonPattern(Animal buddy, Animal rambo) {
+    private static void singletonPattern(AAnimal buddy, AAnimal rambo) {
         System.out.println("\nSingleton pattern\n");
 
         World.getInstance().addAnimal(buddy);
@@ -86,7 +86,7 @@ public class Main {
         System.out.println("World contains:" + World.getInstance().getAnimals());
     }
 
-    private static void observerPattern(Animal buddy, Animal rambo) {
+    private static void observerPattern(AAnimal buddy, AAnimal rambo) {
         System.out.println("\nObserver pattern\n");
 
         final var foodBowl = new FoodBowl();

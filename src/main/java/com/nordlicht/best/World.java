@@ -1,13 +1,13 @@
 package com.nordlicht.best;
 
-import com.nordlicht.best.animal.Animal;
+import com.nordlicht.best.animal.AAnimal;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class World {
     private static final World INSTANCE = new World();
-    private final List<Animal> animals = new ArrayList<>();
+    private final List<AAnimal> animals = new ArrayList<>();
 
     private World() {
     }
@@ -16,11 +16,11 @@ public class World {
         return INSTANCE;
     }
 
-    public List<Animal> getAnimals() {
+    public List<AAnimal> getAnimals() {
         return animals;
     }
 
-    public void addAnimal(Animal animal) {
+    public void addAnimal(AAnimal animal) {
         animals.add(animal);
     }
 }

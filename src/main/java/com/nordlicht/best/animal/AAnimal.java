@@ -2,7 +2,7 @@ package com.nordlicht.best.animal;
 
 import com.nordlicht.best.Noisy;
 
-public abstract class Animal implements Noisy {
+public abstract class AAnimal implements Noisy {
     private final String name;
     private final int age;
     // 100 is full, 0 is starving
@@ -10,7 +10,7 @@ public abstract class Animal implements Noisy {
 
     private FoodBowl foodBowl;
 
-    public Animal(String name, int age) {
+    public AAnimal(String name, int age) {
         this.name = name;
         this.age = age;
     }
